@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { t, type Lang } from '../data/site-strings';
 
 const pathname = Astro.url?.pathname ?? '/';
-const lang: Lang = pathname.startsWith('/fr') ? 'fr' : 'en';
-const homeHref = lang === 'fr' ? '/fr/' : '/';
+const lang: Lang = pathname.startsWith('/en') ? 'en' : 'fr';
+const homeHref = lang === 'fr' ? '/' : '/en/';
 const strings = t(lang);
 const copy = strings.notFound;
 ---

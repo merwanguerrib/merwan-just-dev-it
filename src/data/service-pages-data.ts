@@ -767,7 +767,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
 export const getServicePage = (slug: ServiceSlug) => servicePages[slug];
 
 export const getServicePath = (slug: ServiceSlug, lang: Lang) =>
-  lang === 'fr' ? `/fr/services/${slug}/` : `/services/${slug}/`;
+  lang === 'fr' ? `/services/${slug}/` : `/en/services/${slug}/`;
 
 export const getRelatedServiceSlugs = (slug: ServiceSlug) =>
   servicePageSlugs.filter((item) => item !== slug);

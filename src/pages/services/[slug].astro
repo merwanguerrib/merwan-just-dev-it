@@ -23,24 +23,24 @@ const frPath = getServicePath(slug, 'fr');
 ---
 
 <BaseLayout
-  lang="en"
-  title={page.seoTitle.en}
-  description={page.seoDescription.en}
-  faqItems={page.faqItems.en}
+  lang="fr"
+  title={page.seoTitle.fr}
+  description={page.seoDescription.fr}
+  faqItems={page.faqItems.fr}
   schemaPageType="service"
-  serviceSchemaName={page.label.en}
-  serviceSchemaDescription={page.seoDescription.en}
+  serviceSchemaName={page.label.fr}
+  serviceSchemaDescription={page.seoDescription.fr}
   breadcrumbTrail={[
-    { name: 'Home', path: '/' },
-    { name: page.label.en, path: enPath },
+    { name: 'Accueil', path: '/' },
+    { name: page.label.fr, path: frPath },
   ]}
   alternateEnPath={enPath}
   alternateFrPath={frPath}
-  xDefaultPath={enPath}
+  xDefaultPath={frPath}
 >
-  <Nav lang="en" altHref={frPath} sectionBasePath="/" contactHref="#service-lead-magnet" />
+  <Nav lang="fr" altHref={enPath} sectionBasePath="/" contactHref="#service-lead-magnet" />
   <main id="main-content">
-    <ServicePageContent lang="en" slug={slug} />
+    <ServicePageContent lang="fr" slug={slug} />
   </main>
-  <Footer lang="en" />
+  <Footer lang="fr" />
 </BaseLayout>

@@ -13,30 +13,30 @@ import Contact from '../components/Home/Contact.astro';
 import Footer from '../components/Layout/Footer.astro';
 import { t } from '../data/site-strings';
 
-const strings = t('en');
+const strings = t('fr');
 ---
 <BaseLayout
-  lang="en"
+  lang="fr"
   title={strings.seo.title}
   description={strings.seo.description}
   faqItems={strings.faq.items}
   schemaPageType="home"
   breadcrumbTrail={[
-    { name: 'Home', path: '/' },
+    { name: 'Accueil', path: '/' },
   ]}
 >
-  <Nav lang="en" />
+  <Nav lang="fr" />
   <main id="main-content">
-    <Hero lang="en" />
-    <SeoIntro lang="en" />
-    <ScrollShowcase lang="en" />
-    <Services lang="en" />
-    <LeadMagnet lang="en" />
+    <Hero lang="fr" />
+    <SeoIntro lang="fr" />
+    <ScrollShowcase lang="fr" />
+    <Services lang="fr" />
+    <LeadMagnet lang="fr" />
     <!-- Work section intentionally hidden for now; keep component/data in code to enrich later. -->
-    <Process lang="en" />
-    <Faq lang="en" />
-    <About lang="en" />
-    <Contact lang="en" />
+    <Process lang="fr" />
+    <Faq lang="fr" />
+    <About lang="fr" />
+    <Contact lang="fr" />
   </main>
-  <Footer lang="en" />
+  <Footer lang="fr" />
 </BaseLayout>

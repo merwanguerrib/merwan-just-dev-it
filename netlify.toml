@@ -44,15 +44,26 @@
   status = 301
   force = true
 
-# Auto language routing on the root URL:
-# - French browser => /fr/
-# - Other languages => keep /
+# Locale migration:
+# - French is now the root market URL
+# - English lives under /en/
 [[redirects]]
-  from = "/"
-  to = "/fr/"
-  status = 302
-  force = false
-  conditions = { Language = ["fr"] }
+  from = "/fr"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/*"
+  to = "/:splat"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/sitemap.xml"
