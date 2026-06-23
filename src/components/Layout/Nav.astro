@@ -13,7 +13,7 @@ interface Props {
 const { lang = 'en', altHref, sectionBasePath = '', contactHref } = Astro.props;
 const strings = t(lang);
 const altLang = lang === 'en' ? 'FR' : 'EN';
-const computedAltHref = altHref ?? (lang === 'en' ? '/fr/' : '/');
+const computedAltHref = altHref ?? (lang === 'en' ? '/' : '/en/');
 const sectionPrefix = sectionBasePath || '';
 const servicesHref = `${sectionPrefix}#services`;
 // Case studies are temporarily hidden; keep this slot pointing to an active section.
@@ -29,7 +29,7 @@ const leadMagnetHref = contactHref ?? `${sectionPrefix}#lead-magnet`;
   >
     <!-- Logo -->
     <a
-      href={lang === 'en' ? '/' : '/fr/'}
+      href={lang === 'en' ? '/en/' : '/'}
       class="shrink-0 rounded-full px-3 py-2 transition-colors duration-200 hover:bg-elevated md:mr-6 lg:mr-8"
       aria-label="Just Dev It Agency home"
     >

@@ -1,13 +1,13 @@
-# Google Search Console Tracking Playbook (EN/FR)
+# Google Search Console Tracking Playbook (FR/EN)
 
 ## Goal
 Track SEO performance separately for English and French pages after the service-page rollout.
 
 ## Scope filters
-- EN homepage: `https://merwanguerrib.com/`
-- FR homepage: `https://merwanguerrib.com/fr/`
-- EN services: `https://merwanguerrib.com/services/`
-- FR services: `https://merwanguerrib.com/fr/services/`
+- FR homepage: `https://justdevit.agency/`
+- EN homepage: `https://justdevit.agency/en/`
+- FR services: `https://justdevit.agency/services/`
+- EN services: `https://justdevit.agency/en/services/`
 
 Use **Performance > Search results** and set:
 - Search type: `Web`
@@ -16,15 +16,15 @@ Use **Performance > Search results** and set:
 ## Weekly dashboard (by language)
 Create 2 saved views:
 
-1. EN view
+1. FR view
 - Filter page by regex:
-  - `^https://merwanguerrib\\.com/(services/.*)?$`
-  - Exclude `/fr/`
+  - `^https://justdevit\\.agency/(services/.*)?$`
+  - Exclude `/en/`
 - KPI: Clicks, Impressions, CTR, Average position
 
-2. FR view
+2. EN view
 - Filter page by regex:
-  - `^https://merwanguerrib\\.com/fr/(services/.*)?$`
+  - `^https://justdevit\\.agency/en/(services/.*)?$`
 - KPI: Clicks, Impressions, CTR, Average position
 
 ## Target queries to monitor
@@ -47,7 +47,7 @@ In GSC, add query filters one by one and track trend direction every week.
 - Impressions trending up on both EN and FR service folders.
 - CTR >= 2.5% on branded + service-intent queries.
 - Average position moving toward top 20 for non-branded service queries.
-- No sudden index drop on `/services/*` or `/fr/services/*`.
+- No sudden index drop on `/services/*` or `/en/services/*`.
 
 ## Technical checks after deploy
 - URL Inspection on:
@@ -55,10 +55,10 @@ In GSC, add query filters one by one and track trend direction every week.
   - `/services/app/`
   - `/services/ai-automation/`
   - `/services/n8n/`
-  - `/fr/services/website/`
-  - `/fr/services/app/`
-  - `/fr/services/ai-automation/`
-  - `/fr/services/n8n/`
+  - `/en/services/website/`
+  - `/en/services/app/`
+  - `/en/services/ai-automation/`
+  - `/en/services/n8n/`
 - Confirm:
   - Canonical = self
   - Alternate pages detected

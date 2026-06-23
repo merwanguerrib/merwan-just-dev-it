@@ -35,10 +35,10 @@ interface Props {
 }
 
 const {
-  title = 'Just Dev It Agency | Websites, Apps & AI Automation',
+  title = 'Just Dev It Agency | Websites, Apps & Automatisation IA',
   description,
   faqItems = [],
-  lang = 'en',
+  lang = 'fr',
   alternateEnPath,
   alternateFrPath,
   xDefaultPath,
@@ -56,15 +56,15 @@ const defaultDescription =
 const pageDescription = description ?? defaultDescription;
 
 const siteUrl = 'https://justdevit.agency';
-const canonicalPath = Astro.url?.pathname ?? (lang === 'fr' ? '/fr/' : '/');
+const canonicalPath = Astro.url?.pathname ?? (lang === 'fr' ? '/' : '/en/');
 const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
 const toAbsoluteUrl = (path: string) =>
   path.startsWith('http://') || path.startsWith('https://')
     ? path
     : new URL(path.startsWith('/') ? path : `/${path}`, siteUrl).toString();
-const enUrl = toAbsoluteUrl(alternateEnPath ?? '/');
-const frUrl = toAbsoluteUrl(alternateFrPath ?? '/fr/');
-const xDefaultUrl = toAbsoluteUrl(xDefaultPath ?? alternateEnPath ?? '/');
+const enUrl = toAbsoluteUrl(alternateEnPath ?? '/en/');
+const frUrl = toAbsoluteUrl(alternateFrPath ?? '/');
+const xDefaultUrl = toAbsoluteUrl(xDefaultPath ?? alternateFrPath ?? '/');
 const logoImage = new URL('/merwan-photo.png', siteUrl).toString();
 const ogImagePath = lang === 'fr' ? '/justdevit_fr.png' : '/justdevit_en.png';
 const ogImage = new URL(ogImagePath, siteUrl).toString();
@@ -90,10 +90,10 @@ const inLanguage = lang === 'fr' ? 'fr-FR' : 'en-US';
 const alternateOgLocale = lang === 'fr' ? 'en_US' : 'fr_FR';
 const marseilleLat = 43.2965;
 const marseilleLng = 5.3698;
-const contactUrl = toAbsoluteUrl(lang === 'fr' ? '/fr/#contact' : '/#contact');
+const contactUrl = toAbsoluteUrl(lang === 'fr' ? '/#contact' : '/en/#contact');
 const isServiceSlug = (value: string): value is ServiceSlug =>
   servicePageSlugs.includes(value as ServiceSlug);
-const servicePathMatch = canonicalPath.match(/^\/(?:fr\/)?services\/([^/]+)\/?$/);
+const servicePathMatch = canonicalPath.match(/^\/(?:en\/)?services\/([^/]+)\/?$/);
 const currentServiceSlug =
   servicePathMatch && isServiceSlug(servicePathMatch[1]) ? servicePathMatch[1] : null;
 
@@ -146,7 +146,7 @@ const serviceCatalogGroups =
 const defaultBreadcrumbTrail: BreadcrumbTrailItem[] = [
   {
     name: lang === 'fr' ? 'Accueil' : 'Home',
-    path: lang === 'fr' ? '/fr/' : '/',
+    path: lang === 'fr' ? '/' : '/en/',
   },
 ];
 

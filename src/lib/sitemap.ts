@@ -34,8 +34,8 @@ const EXCLUDED_PATHS = new Set([
 
 const DYNAMIC_ROUTE_EXPANDERS: Record<string, () => string[]> = {
   '/services/[slug]/': () => servicePageSlugs.map((slug) => `/services/${slug}/`),
-  '/fr/services/[slug]/': () =>
-    servicePageSlugs.map((slug) => `/fr/services/${slug}/`),
+  '/en/services/[slug]/': () =>
+    servicePageSlugs.map((slug) => `/en/services/${slug}/`),
 };
 
 const escapeXml = (value: string): string =>
@@ -111,10 +111,10 @@ const expandRoutePattern = (pattern: string): string[] => {
   return expander ? expander() : [];
 };
 
-const isFrenchPath = (path: string): boolean => path === '/fr/' || path.startsWith('/fr/');
+const isEnglishPath = (path: string): boolean => path === '/en/' || path.startsWith('/en/');
 
 const getPageMetadata = (path: string): Omit<SitemapEntry, 'path'> => {
-  if (path === '/' || path === '/fr/') {
+  if (path === '/' || path === '/en/') {
     return { changefreq: 'weekly', priority: '1.0' };
   }
   return { changefreq: 'monthly', priority: '0.8' };
@@ -156,7 +156,7 @@ const collectAllPaths = async (): Promise<string[]> => {
 export const getSitemapEntries = async (locale: Locale): Promise<SitemapEntry[]> => {
   const allPaths = await collectAllPaths();
   const filtered = allPaths.filter((path) =>
-    locale === 'fr' ? isFrenchPath(path) : !isFrenchPath(path)
+    locale === 'en' ? isEnglishPath(path) : !isEnglishPath(path)
   );
 
   return filtered.map((path) => ({

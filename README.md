@@ -13,7 +13,7 @@
 
 ## 🌐 Liens utiles
 
-- Production: [merwanguerrib.com](https://merwanguerrib.com)
+- Production: [justdevit.agency](https://justdevit.agency)
 - Repository: [github.com/merwanguerrib/merwan-just-dev-it](https://github.com/merwanguerrib/merwan-just-dev-it)
 
 ## ✨ Ce que tu trouves dans ce repo
@@ -85,16 +85,16 @@ npm run rebuild:hero-frames -- <video-path> [fps] [desktop-width] [mobile-width]
 ## ✍️ Modifier le contenu
 
 - `src/data/site-strings.ts`: navigation, labels et textes globaux FR/EN
-- `src/data/service-pages-data.ts`: pages services (`/services/*` et `/fr/services/*`)
+- `src/data/service-pages-data.ts`: pages services (`/services/*` et `/en/services/*`)
 - `src/data/projects-data.ts`: projets/cas clients de la home
 - `src/components/Home/*`: structure et presentation des sections d'accueil
 
 ## 🛣 Routes principales
 
-- `/` (anglais)
-- `/fr/` (francais)
-- `/services/:slug`
-- `/fr/services/:slug`
+- `/` (francais)
+- `/en/` (anglais)
+- `/services/:slug` (francais)
+- `/en/services/:slug` (anglais)
 - `/sitemap.xml`, `/sitemap-en.xml`, `/sitemap-fr.xml`
 
 ## ☁️ Deploiement Netlify
@@ -104,8 +104,8 @@ La config est versionnee dans `netlify.toml`:
 - `command = "npm run build"`
 - `publish = "dist"`
 
-Redirection linguistique active:
-- navigateur FR sur `/` -> redirection `302` vers `/fr/`
+Migration linguistique active:
+- `/fr` et `/fr/*` redirigent en `301` vers les URLs francaises racine equivalentes
 
 ## ✅ Verification avant merge
 

@@ -15,7 +15,7 @@ interface Props {
 const { lang = 'en', slug } = Astro.props;
 const page = getServicePage(slug);
 const relatedSlugs = getRelatedServiceSlugs(slug);
-const homePath = lang === 'fr' ? '/fr/' : '/';
+const homePath = lang === 'fr' ? '/' : '/en/';
 const servicesPath = `${homePath}#services`;
 const serviceLeadPath = '#service-lead-magnet';
 const workPath = `${homePath}#services`;

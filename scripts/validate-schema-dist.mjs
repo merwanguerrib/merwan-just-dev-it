@@ -79,9 +79,9 @@ function inferRequiredTypes(distRelativePath) {
 
   if (
     normalized === 'index.html' ||
-    normalized === 'fr/index.html' ||
+    normalized === 'en/index.html' ||
     /^services\/[^/]+\/index\.html$/.test(normalized) ||
-    /^fr\/services\/[^/]+\/index\.html$/.test(normalized)
+    /^en\/services\/[^/]+\/index\.html$/.test(normalized)
   ) {
     return [
       'Organization',

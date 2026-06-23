@@ -25,12 +25,12 @@ function buildUrls(args) {
     const envBase = process.env.DEPLOY_PRIME_URL || process.env.URL;
     if (!envBase) return [];
     const base = normalizeBaseUrl(envBase);
-    return [`${base}/`, `${base}/fr/`];
+    return [`${base}/`, `${base}/en/`];
   }
 
   if (args.length === 1) {
     const base = normalizeBaseUrl(args[0]);
-    return [`${base}/`, `${base}/fr/`];
+    return [`${base}/`, `${base}/en/`];
   }
 
   return args.map((arg) => new URL(arg).toString());

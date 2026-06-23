@@ -1,6 +1,6 @@
-# Merwan Guerrib
+# Just Dev It Agency
 
-Merwan Guerrib is a freelance fullstack developer based in Marseille, France.
+Just Dev It Agency builds conversion-focused websites, full-stack apps, AI automation systems, and n8n workflows from Marseille, France.
 
 ## Services
 
@@ -12,10 +12,10 @@ Merwan Guerrib is a freelance fullstack developer based in Marseille, France.
 
 ## Preferred pages
 
-- https://merwanguerrib.com/
-- https://merwanguerrib.com/fr/
+- https://justdevit.agency/
+- https://justdevit.agency/en/
 
 ## Contact
 
-- https://merwanguerrib.com/#contact
+- https://justdevit.agency/#contact
 - mailto:merwanguerrib@gmail.com
