@@ -60,22 +60,22 @@ export const servicePageSlugs: ServiceSlug[] = [
 export const servicePages: Record<ServiceSlug, ServicePageContent> = {
   website: {
     slug: 'website',
-    label: { en: 'Website Development', fr: 'Développement Website' },
+    label: { en: 'Website Development', fr: 'Création de sites internet' },
     seoTitle: {
       en: 'Website Development in Marseille | Conversion-Focused Sites',
-      fr: 'Développement Website à Marseille | Sites Orientés Conversion',
+      fr: 'Création de site internet à Marseille | Just Dev It',
     },
     seoDescription: {
       en: 'Agency website development in Marseille: conversion-first UX, technical SEO, and clean delivery to generate qualified leads.',
-      fr: 'Développement website en agence à Marseille: UX orientée conversion, SEO technique et delivery propre pour générer des leads qualifiés.',
+      fr: 'Création et refonte de site internet à Marseille : UX orientée conversion, SEO technique et livraison soignée pour générer des demandes qualifiées.',
     },
     h1: {
       en: 'Conversion-Focused Website Development',
-      fr: 'Développement de Website Orienté Conversion',
+      fr: 'Création et refonte de sites internet à Marseille',
     },
     intro: {
       en: `Most websites do not underperform because of design. They underperform because the offer is vague, page flow is unclear, and the next step is weak. We rebuild websites around one commercial goal: more qualified pipeline conversations. That means tighter positioning, cleaner page hierarchy, stronger CTA logic, and technical SEO integrated from day one. We usually step in when traffic looks healthy but conversion is inconsistent, or when a redesign is needed without losing search momentum. Based in Marseille, we work with founders, product teams, and agencies in France and internationally. You get a website that is easier to rank, easier to manage, and easier for the right prospects to say yes to.`,
-      fr: `Nous concevons des websites pensés pour convertir avant d'être pensés pour décorer. Chaque page sert un objectif business clair: plus de rendez-vous qualifiés, plus de demandes de démo, ou un inbound plus rentable. Notre approche combine positionnement, copywriting de conversion, hiérarchie UX, SEO technique et implémentation performante pour que votre site soit visible et convaincant. Basés à Marseille, nous accompagnons des équipes en France et à l'international, surtout quand le trafic progresse mais que la conversion stagne, ou lorsqu'une refonte est nécessaire sans casser l'acquisition en cours. Avec plus de 10 ans d'expérience et 50+ missions livrées, nous aidons les fondateurs, équipes produit et agences à transformer des pages dispersées en système d'acquisition cohérent. Vous obtenez des priorités actionnables, des décisions mesurables et un site facile à faire évoluer dans le temps.`,
+      fr: `Just Dev It Agency crée et refond des sites internet depuis Marseille. Nous concevons des sites pensés pour convertir avant d'être pensés pour décorer. Chaque page sert un objectif business clair: plus de rendez-vous qualifiés, plus de demandes de démo, ou un inbound plus rentable. Notre approche combine positionnement, copywriting de conversion, hiérarchie UX, SEO technique et implémentation performante pour que votre site soit visible et convaincant. Basés à Marseille, nous accompagnons des équipes en France et à l'international, surtout quand le trafic progresse mais que la conversion stagne, ou lorsqu'une refonte est nécessaire sans casser l'acquisition en cours. Avec plus de 10 ans d'expérience et 50+ missions livrées, nous aidons les fondateurs, équipes produit et agences à transformer des pages dispersées en système d'acquisition cohérent. Vous obtenez des priorités actionnables, des décisions mesurables et un site facile à faire évoluer dans le temps.`,
     },
     offerTitle: {
       en: 'What is included',
@@ -236,18 +236,18 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
   },
   app: {
     slug: 'app',
-    label: { en: 'App Development', fr: 'Développement App' },
+    label: { en: 'App Development', fr: 'Applications web sur mesure' },
     seoTitle: {
       en: 'Full-Stack App Development in Marseille | Product Delivery',
-      fr: 'Développement App Full-Stack à Marseille | Delivery Produit',
+      fr: 'Application web sur mesure à Marseille | Just Dev It',
     },
     seoDescription: {
       en: 'Full-stack app development in Marseille: architecture, secure auth, APIs, and reliable delivery for startups and product teams.',
-      fr: 'Développement app full-stack à Marseille: architecture, auth sécurisée, APIs et delivery fiable pour startups et équipes produit.',
+      fr: 'Développement d\'applications web sur mesure à Marseille : architecture, authentification sécurisée, APIs et livraison fiable pour startups et équipes produit.',
     },
     h1: {
       en: 'Full-Stack Web App Development',
-      fr: 'Développement d\'Applications Web Full-Stack',
+      fr: 'Développement d\'applications web à Marseille',
     },
     intro: {
       en: `Shipping features gets hard once an app has real usage. Quick fixes accumulate, release confidence drops, and each sprint takes longer than planned. We help teams regain delivery speed without creating new technical debt. We can join an existing codebase, map the bottlenecks, and ship across frontend, backend, API, and data layers. Most engagements start when velocity slows after MVP, when product and engineering handoffs break down, or when roadmap delivery needs senior full-stack ownership. You get pragmatic architecture decisions, reliable implementation, and code your team can maintain after handover.`,
@@ -415,7 +415,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
     label: { en: 'AI Automation', fr: 'Automatisation IA' },
     seoTitle: {
       en: 'AI Automation Services in Marseille | Workflows & Agents',
-      fr: 'Services d\'Automatisation IA à Marseille | Workflows & Agents',
+      fr: 'Automatisation IA à Marseille | Just Dev It',
     },
     seoDescription: {
       en: 'AI automation development in Marseille: workflows, agents, and integrations that reduce manual work and speed up operations.',
@@ -423,7 +423,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
     },
     h1: {
       en: 'AI Automation Development',
-      fr: 'Développement d\'Automatisations IA',
+      fr: 'Automatisez les tâches répétitives de votre entreprise',
     },
     intro: {
       en: `AI automation is useful only when it removes real friction from daily operations. We build workflows that take repetitive work off your team, including lead qualification, support triage, content operations, internal copilots, and reporting pipelines connected to your existing tools. The focus is operational impact, not demo effects. We define success early, such as time saved, response time, and error reduction, then implement with guardrails so quality stays predictable. From Marseille, we work with teams in France and internationally, often after failed pilots or scattered AI experiments. You get maintainable automations your team can run every day, not fragile one-off prototypes.`,
@@ -591,7 +591,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
     label: { en: 'n8n Workflows', fr: 'Workflows n8n' },
     seoTitle: {
       en: 'n8n Workflow Automation in Marseille | Integration & Ops',
-      fr: 'Automatisation n8n à Marseille | Intégration & Ops',
+      fr: 'Agence n8n à Marseille | Just Dev It',
     },
     seoDescription: {
       en: 'n8n integration in Marseille for lead routing, CRM sync, alerts, and operations automation with resilient workflow architecture.',
@@ -599,7 +599,7 @@ export const servicePages: Record<ServiceSlug, ServicePageContent> = {
     },
     h1: {
       en: 'n8n Workflow Integration',
-      fr: 'Intégration de Workflows n8n',
+      fr: 'Intégration et maintenance n8n à Marseille',
     },
     intro: {
       en: `n8n can remove a lot of manual operations work, but only if workflows are built like production systems. We design n8n architectures that connect forms, CRM, email tools, internal APIs, AI services, and reporting without creating hidden failure points. Most clients call us when lead routing breaks, alerts are noisy, or ownership is unclear across tools. We set naming standards, add retries and fallback paths, and make failures visible before they hurt pipeline performance. Based in Marseille and working internationally, we help teams turn ad-hoc automations into a stable operations layer they can trust every day.`,

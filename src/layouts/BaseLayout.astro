@@ -50,8 +50,8 @@ const {
 
 const defaultDescription =
   lang === 'fr'
-    ? 'Nous concevons des websites orientés conversion, des applications full-stack et des workflows d\'automatisation IA avec n8n ou des outils no-code. Basés à Marseille, nous accompagnons des clients partout.'
-    : 'We design and build conversion-focused websites, full-stack apps, and AI automation systems with n8n and modern no-code tooling. Based in Marseille, serving clients worldwide.';
+    ? 'Création de sites internet, applications web et automatisation IA avec n8n. Agence basée à Marseille, au service d\'équipes en France et à l\'international.'
+    : 'Conversion-focused websites, full-stack apps and AI automation with n8n. Based in Marseille, working with teams in France and abroad.';
 
 const pageDescription = description ?? defaultDescription;
 
@@ -88,8 +88,6 @@ const faqId = `${canonicalUrl}#faq`;
 const currentServiceId = `${canonicalUrl}#service`;
 const inLanguage = lang === 'fr' ? 'fr-FR' : 'en-US';
 const alternateOgLocale = lang === 'fr' ? 'en_US' : 'fr_FR';
-const marseilleLat = 43.2965;
-const marseilleLng = 5.3698;
 const contactUrl = toAbsoluteUrl(lang === 'fr' ? '/#contact' : '/en/#contact');
 const isServiceSlug = (value: string): value is ServiceSlug =>
   servicePageSlugs.includes(value as ServiceSlug);
@@ -228,7 +226,7 @@ const organizationSchema = {
     {
       '@type': 'ContactPoint',
       contactType: 'sales',
-      email: 'merwanguerrib@gmail.com',
+      email: 'contact@justdevit.agency',
       areaServed: 'Worldwide',
       availableLanguage: languageRefs,
     },
@@ -247,11 +245,6 @@ const professionalServiceSchema = {
     addressLocality: 'Marseille',
     addressRegion: 'Provence-Alpes-Côte d\'Azur',
     addressCountry: 'FR',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: marseilleLat,
-    longitude: marseilleLng,
   },
   areaServed: 'Worldwide',
   founder: {
@@ -449,8 +442,6 @@ const schemaGraph = {
     <meta name="robots" content={robotsContent} />
     <meta name="geo.region" content="FR-13" />
     <meta name="geo.placename" content="Marseille" />
-    <meta name="geo.position" content={`${marseilleLat};${marseilleLng}`} />
-    <meta name="ICBM" content={`${marseilleLat}, ${marseilleLng}`} />
     <title>{title}</title>
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="en" href={enUrl} />

@@ -1,0 +1,120 @@
+---
+import type { Lang } from '../../data/site-strings';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'fr' } = Astro.props;
+const email = 'contact@justdevit.agency';
+
+const copy = {
+  fr: {
+    eyebrow: 'Informations légales',
+    title: 'Politique de confidentialité',
+    updated: 'Dernière mise à jour : 23 octobre 2026',
+    sections: [
+      {
+        heading: 'Qui traite vos données',
+        body: [
+          `Just Dev It Agency, agence web basée à Marseille, est responsable du traitement des données collectées sur justdevit.agency. Contact : ${email}.`,
+        ],
+      },
+      {
+        heading: 'Données collectées via les formulaires',
+        body: [
+          'Les formulaires de contact, d\'audit gratuit et de demande de service collectent votre adresse email, l\'adresse de votre site ou la description de votre stack, et le message ou l\'objectif que vous renseignez. Nous enregistrons aussi la langue de la page et la page d\'où part la demande, afin de savoir quelle offre vous intéresse.',
+          'Ces données servent uniquement à répondre à votre demande et à préparer une éventuelle collaboration. Elles ne sont ni vendues ni cédées à des tiers à des fins publicitaires.',
+        ],
+      },
+      {
+        heading: 'Base légale et durée de conservation',
+        body: [
+          'Le traitement repose sur votre demande de contact et, si une mission est envisagée, sur les mesures précontractuelles. Vos données sont conservées le temps nécessaire pour traiter votre demande et suivre la relation commerciale qui en découle. Vous pouvez demander leur suppression à tout moment.',
+        ],
+      },
+      {
+        heading: 'Prestataires techniques',
+        body: [
+          'Le site est hébergé par Netlify, qui reçoit et stocke les envois de formulaires. Les polices de caractères sont chargées depuis Google Fonts, ce qui transmet votre adresse IP à Google lors de l\'affichage de la page.',
+          'Le site n\'utilise pas de cookies de mesure d\'audience ni de cookies publicitaires.',
+        ],
+      },
+      {
+        heading: 'Vos droits',
+        body: [
+          `Vous pouvez demander l\'accès, la rectification, l\'effacement ou la limitation du traitement de vos données, ou vous y opposer, en écrivant à ${email}. Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (cnil.fr).`,
+        ],
+      },
+    ],
+    back: 'Retour à l\'accueil',
+    homePath: '/',
+  },
+  en: {
+    eyebrow: 'Legal information',
+    title: 'Privacy policy',
+    updated: 'Last updated: October 23, 2026',
+    sections: [
+      {
+        heading: 'Who processes your data',
+        body: [
+          `Just Dev It Agency, a web agency based in Marseille, France, is the data controller for information collected on justdevit.agency. Contact: ${email}.`,
+        ],
+      },
+      {
+        heading: 'Data collected through forms',
+        body: [
+          'The contact, free audit and service request forms collect your email address, your website address or a description of your stack, and the message or objective you enter. We also record the page language and the page the request was sent from, so we know which offer you are interested in.',
+          'This data is used only to answer your request and prepare a possible collaboration. It is not sold or passed to third parties for advertising.',
+        ],
+      },
+      {
+        heading: 'Legal basis and retention',
+        body: [
+          'Processing is based on your request to be contacted and, if a project is considered, on pre-contractual steps. Your data is kept for as long as needed to handle your request and the resulting business relationship. You can ask for its deletion at any time.',
+        ],
+      },
+      {
+        heading: 'Technical providers',
+        body: [
+          'The site is hosted by Netlify, which receives and stores form submissions. Fonts are loaded from Google Fonts, which sends your IP address to Google when the page is displayed.',
+          'The site does not use analytics cookies or advertising cookies.',
+        ],
+      },
+      {
+        heading: 'Your rights',
+        body: [
+          `You can request access to, correction, deletion or restriction of your data, or object to its processing, by writing to ${email}. If you believe your rights are not respected, you can lodge a complaint with the CNIL (cnil.fr).`,
+        ],
+      },
+    ],
+    back: 'Back to homepage',
+    homePath: '/en/',
+  },
+}[lang];
+---
+
+<main id="main-content" class="relative min-h-[100dvh] bg-canvas px-4 py-24 md:py-32">
+  <div class="mx-auto w-full max-w-3xl">
+    <article class="card-shell">
+      <div class="card-core p-8 md:p-12">
+        <span class="eyebrow">{copy.eyebrow}</span>
+        <h1 class="mt-4 text-display-md font-semibold text-ink">{copy.title}</h1>
+        <p class="mt-2 text-sm text-muted">{copy.updated}</p>
+
+        <div class="mt-8 space-y-8">
+          {copy.sections.map((section) => (
+            <section>
+              <h2 class="font-display text-xl font-bold text-dark">{section.heading}</h2>
+              {section.body.map((paragraph) => (
+                <p class="mt-3 text-base leading-relaxed text-muted">{paragraph}</p>
+              ))}
+            </section>
+          ))}
+        </div>
+
+        <a href={copy.homePath} class="btn-ghost mt-10 inline-flex text-sm px-6 py-3">{copy.back}</a>
+      </div>
+    </article>
+  </div>
+</main>

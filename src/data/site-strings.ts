@@ -5,11 +5,11 @@ export const t = (lang: Lang) => ({
     title:
       lang === 'en'
         ? 'Just Dev It Agency | Websites, Apps & AI Automation'
-        : 'Just Dev It Agency | Websites, Apps & Automatisation IA',
+        : 'Agence web à Marseille : sites et IA | Just Dev It',
     description:
       lang === 'en'
-        ? 'We design and build conversion-focused websites, full-stack apps, and AI automation systems with n8n and modern no-code tooling. Based in Marseille, serving clients worldwide.'
-        : 'Nous concevons des websites orientés conversion, des applications full-stack et des systèmes d\'automatisation IA avec n8n et les meilleurs outils no-code. Basés à Marseille, nous accompagnons des clients partout.',
+        ? 'Conversion-focused websites, full-stack apps and AI automation with n8n. Based in Marseille, working with teams in France and abroad.'
+        : 'Création de sites internet, applications web et automatisation IA avec n8n. Agence basée à Marseille, au service d\'équipes en France et à l\'international.',
   },
   nav: {
     services: lang === 'en' ? 'Services' : 'Services',
@@ -60,7 +60,7 @@ export const t = (lang: Lang) => ({
     seoH1:
       lang === 'en'
         ? 'Websites, Apps & AI Automation Agency in Marseille'
-        : 'Agence web, app et automatisation IA à Marseille',
+        : 'Agence web et automatisation IA à Marseille',
     tagline: 'Just dev it.',
     subtitle:
       lang === 'en'
@@ -319,6 +319,18 @@ export const t = (lang: Lang) => ({
           lang === 'en'
             ? 'Ismaël leads growth and operations. He structures acquisition strategy, clarifies offers, and keeps execution aligned with measurable business outcomes.\n\nTogether with Merwan, he ensures each website, app, or automation project ships with clear priorities, tight timelines, and proactive client communication.'
             : 'Ismaël pilote la croissance et les opérations. Il structure la stratégie d’acquisition, clarifie les offres et aligne l’exécution sur des objectifs business mesurables.\n\nAvec Merwan, il s’assure que chaque projet website, app ou automatisation avance avec des priorités nettes, des délais maîtrisés et une communication client proactive.',
+      },
+      {
+        id: 'sofyan',
+        name: 'Sofyan Guerrib',
+        role:
+          lang === 'en'
+            ? 'Co-Founder · Account Executive'
+            : 'Co-fondateur · Account Executive',
+        bio:
+          lang === 'en'
+            ? 'Sofyan leads the agency’s sales strategy, from prospect targeting to negotiation. He uses sales intelligence to assess markets, identify opportunities, and shape offers around client needs.\n\nAn n8n expert, he automates prospecting, lead qualification, and CRM follow-up. He connects sales tools to keep data reliable and make each opportunity easier to track.'
+            : 'Sofyan pilote la stratégie commerciale de l’agence, du ciblage des prospects à la négociation. Il s’appuie sur l’intelligence commerciale pour analyser les marchés, repérer les opportunités et construire des offres adaptées aux clients.\n\nExpert n8n, il automatise la prospection, la qualification des leads et le suivi CRM. Il relie les outils commerciaux pour fiabiliser les données et faciliter le suivi de chaque opportunité.',
       },
     ],
   },
