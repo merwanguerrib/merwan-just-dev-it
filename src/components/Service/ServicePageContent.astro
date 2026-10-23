@@ -18,7 +18,6 @@ const relatedSlugs = getRelatedServiceSlugs(slug);
 const homePath = lang === 'fr' ? '/' : '/en/';
 const servicesPath = `${homePath}#services`;
 const serviceLeadPath = '#service-lead-magnet';
-const workPath = `${homePath}#services`;
 const formName = 'service-lead-audit';
 const formId = `service-lead-form-${slug}-${lang}`;
 const successId = `service-lead-success-${slug}-${lang}`;
@@ -191,7 +190,7 @@ const formText =
               </a>
             ))}
           </div>
-          <a href={workPath} class="inline-flex mt-6 text-sm font-medium text-muted hover:text-dark transition-colors duration-200">
+          <a href={servicesPath} class="inline-flex mt-6 text-sm font-medium text-muted hover:text-dark transition-colors duration-200">
             {lang === 'fr' ? 'Explorer les services' : 'Explore services'}
           </a>
         </div>
@@ -301,9 +300,6 @@ const formText =
           </div>
 
           <div class="mt-5 flex flex-wrap gap-3">
-            <a href={workPath} class="btn-ghost text-sm px-6 py-3">
-              {lang === 'fr' ? 'Voir les projets livrés' : 'See delivered projects'}
-            </a>
             <a href={servicesPath} class="btn-ghost text-sm px-6 py-3">
               {lang === 'fr' ? 'Voir tous les services' : 'See all services'}
             </a>

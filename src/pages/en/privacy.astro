@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Layout/Nav.astro';
+import Footer from '../../components/Layout/Footer.astro';
+import PrivacyContent from '../../components/Legal/PrivacyContent.astro';
+---
+
+<BaseLayout
+  lang="en"
+  title="Privacy policy | Just Dev It"
+  description="How Just Dev It Agency handles data sent through its contact and audit forms: purpose, hosting, retention and your rights."
+  breadcrumbTrail={[
+    { name: 'Home', path: '/en/' },
+    { name: 'Privacy', path: '/en/privacy/' },
+  ]}
+  alternateFrPath="/confidentialite/"
+  alternateEnPath="/en/privacy/"
+  xDefaultPath="/confidentialite/"
+>
+  <Nav lang="en" sectionBasePath="/en/" altHref="/confidentialite/" />
+  <PrivacyContent lang="en" />
+  <Footer lang="en" />
+</BaseLayout>

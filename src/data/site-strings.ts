@@ -5,11 +5,11 @@ export const t = (lang: Lang) => ({
     title:
       lang === 'en'
         ? 'Just Dev It Agency | Websites, Apps & AI Automation'
-        : 'Just Dev It Agency | Websites, Apps & Automatisation IA',
+        : 'Agence web à Marseille : sites et IA | Just Dev It',
     description:
       lang === 'en'
-        ? 'We design and build conversion-focused websites, full-stack apps, and AI automation systems with n8n and modern no-code tooling. Based in Marseille, serving clients worldwide.'
-        : 'Nous concevons des websites orientés conversion, des applications full-stack et des systèmes d\'automatisation IA avec n8n et les meilleurs outils no-code. Basés à Marseille, nous accompagnons des clients partout.',
+        ? 'Conversion-focused websites, full-stack apps and AI automation with n8n. Based in Marseille, working with teams in France and abroad.'
+        : 'Création de sites internet, applications web et automatisation IA avec n8n. Agence basée à Marseille, au service d\'équipes en France et à l\'international.',
   },
   nav: {
     services: lang === 'en' ? 'Services' : 'Services',
@@ -60,7 +60,7 @@ export const t = (lang: Lang) => ({
     seoH1:
       lang === 'en'
         ? 'Websites, Apps & AI Automation Agency in Marseille'
-        : 'Agence web, app et automatisation IA à Marseille',
+        : 'Agence web et automatisation IA à Marseille',
     tagline: 'Just dev it.',
     subtitle:
       lang === 'en'

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Layout/Nav.astro';
+import Footer from '../components/Layout/Footer.astro';
+import PrivacyContent from '../components/Legal/PrivacyContent.astro';
+---
+
+<BaseLayout
+  lang="fr"
+  title="Politique de confidentialité | Just Dev It"
+  description="Comment Just Dev It Agency traite les données envoyées via ses formulaires de contact et d'audit : finalité, hébergement, durée de conservation et droits."
+  breadcrumbTrail={[
+    { name: 'Accueil', path: '/' },
+    { name: 'Confidentialité', path: '/confidentialite/' },
+  ]}
+  alternateFrPath="/confidentialite/"
+  alternateEnPath="/en/privacy/"
+  xDefaultPath="/confidentialite/"
+>
+  <Nav lang="fr" altHref="/en/privacy/" sectionBasePath="/" />
+  <PrivacyContent lang="fr" />
+  <Footer lang="fr" />
+</BaseLayout>
