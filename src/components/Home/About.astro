@@ -4,6 +4,7 @@ import type { Lang } from '../../data/site-strings';
 import { t } from '../../data/site-strings';
 import merwanPhoto from '../../assets/merwan-photo.jpg';
 import ismaelPhoto from '../../assets/ismael-photo.webp';
+import sofyanPhoto from '../../assets/sofyan-photo.webp';
 
 interface Props {
   lang?: Lang;
@@ -15,11 +16,13 @@ const { about } = strings;
 const memberPhotos = {
   merwan: merwanPhoto,
   ismael: ismaelPhoto,
+  sofyan: sofyanPhoto,
 } as const;
 
 const memberObjectPositions: Record<string, string> = {
   merwan: '50% 20%',
   ismael: '50% 16%',
+  sofyan: '50% 18%',
 };
 ---
 
@@ -32,21 +35,21 @@ const memberObjectPositions: Record<string, string> = {
       </h2>
     </div>
 
-    <div class="mt-10 grid gap-6 md:grid-cols-2">
+    <div class="mt-10 flex flex-wrap justify-center gap-6">
       {
         about.members.map((member, index) => (
-          <article class="card-shell reveal h-full" data-delay={String(70 + index * 70)}>
+          <article class="card-shell reveal w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]" data-delay={String(70 + index * 70)}>
             <div class="card-core flex h-full flex-col overflow-hidden p-0">
-              <div class="aspect-[4/5] bg-canvas md:aspect-[9/10] lg:aspect-[10/11]">
+              <div class="relative aspect-[4/5] shrink-0 overflow-hidden bg-canvas md:aspect-[9/10] lg:aspect-[10/11]">
                 <Image
                   src={memberPhotos[member.id as keyof typeof memberPhotos] ?? merwanPhoto}
                   alt={member.name}
-                  class="h-full w-full object-cover"
+                  class="absolute inset-0 h-full w-full object-cover"
                   style={`object-position: ${memberObjectPositions[member.id] ?? '50% 18%'};`}
                   loading="lazy"
                   decoding="async"
-                  widths={[520, 760, 900, 1100]}
-                  sizes="(min-width: 1280px) 460px, (min-width: 768px) calc(50vw - 2rem), 100vw"
+                  widths={[360, 520, 760, 900, 1100]}
+                  sizes="(min-width: 1184px) 368px, (min-width: 1024px) calc((100vw - 5rem) / 3), (min-width: 768px) calc((100vw - 3.5rem) / 2), calc(100vw - 2rem)"
                   format="webp"
                 />
               </div>

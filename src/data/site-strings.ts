@@ -320,6 +320,18 @@ export const t = (lang: Lang) => ({
             ? 'Ismaël leads growth and operations. He structures acquisition strategy, clarifies offers, and keeps execution aligned with measurable business outcomes.\n\nTogether with Merwan, he ensures each website, app, or automation project ships with clear priorities, tight timelines, and proactive client communication.'
             : 'Ismaël pilote la croissance et les opérations. Il structure la stratégie d’acquisition, clarifie les offres et aligne l’exécution sur des objectifs business mesurables.\n\nAvec Merwan, il s’assure que chaque projet website, app ou automatisation avance avec des priorités nettes, des délais maîtrisés et une communication client proactive.',
       },
+      {
+        id: 'sofyan',
+        name: 'Sofyan Guerrib',
+        role:
+          lang === 'en'
+            ? 'Co-Founder · Account Executive'
+            : 'Co-fondateur · Account Executive',
+        bio:
+          lang === 'en'
+            ? 'Sofyan leads the agency’s sales strategy, from prospect targeting to negotiation. He uses sales intelligence to assess markets, identify opportunities, and shape offers around client needs.\n\nAn n8n expert, he automates prospecting, lead qualification, and CRM follow-up. He connects sales tools to keep data reliable and make each opportunity easier to track.'
+            : 'Sofyan pilote la stratégie commerciale de l’agence, du ciblage des prospects à la négociation. Il s’appuie sur l’intelligence commerciale pour analyser les marchés, repérer les opportunités et construire des offres adaptées aux clients.\n\nExpert n8n, il automatise la prospection, la qualification des leads et le suivi CRM. Il relie les outils commerciaux pour fiabiliser les données et faciliter le suivi de chaque opportunité.',
+      },
     ],
   },
   contact: {
